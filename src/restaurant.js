@@ -21,6 +21,7 @@ function  removeMenuItem(nameOfRestaurant, lostItem, mealType){
   for (var i = 0; i < nameOfRestaurant.menus[mealType].length; i++) {
     if (nameOfRestaurant.menus[mealType][i].name === lostItem) {
       nameOfRestaurant.menus[mealType].splice(searchForItem, 1);
+      return `No one is eating our ${lostItem} - it has been removed from the ${mealType} menu!`
     }
   }
   return `Sorry, we don't sell ${lostItem}, try adding a new recipe!`
